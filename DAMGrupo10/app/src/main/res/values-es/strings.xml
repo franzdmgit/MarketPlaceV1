@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">DAMGrupo10</string>
+    <string name="txt_jugar">JUGAR</string>
+    <string name="txt_perfil">PERFIL</string>
+    <string name="txt_ajustes">AJUSTES</string>
+    <string name="txt_acerca_de">ACERCA DE...</string>
+    <string name="txt_usuario">USUARIO</string>
+    <string name="txt_contrasena">INGRESE CONTRASEÑA</string>
+    <string name="txt_entrar">ENTRAR</string>
+    <string name="txt_nueva_cuenta">NUEVA CUENTA</string>
+    <string name="txt_crear_contrasena">CREAR CONTRASEÑA</string>
+</resources>

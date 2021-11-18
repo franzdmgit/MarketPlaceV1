@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:orientation="vertical"
+    android:layout_margin="20dp">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/logo"
+        android:padding="10dp"
+        android:layout_weight="50">
+    </ImageView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_usuario"
+        style="style/MyTextView">
+    </TextView>
+
+    <EditText
+        android:id="@+id/edt_usuario"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="6"
+        style="@style/MyEditText"
+        android:hint="@string/txt_usuario">
+    </EditText>
+    
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_contrasena"
+        style="style/MyTextView">
+    </TextView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:passwordToggleEnabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edt_contrasena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="10"
+            android:inputType="textPassword"
+            style="@style/MyEditText" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_entrar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/txt_entrar"
+        android:layout_weight="10">
+    </Button>
+
+    <Button
+        android:id="@+id/btn_nueva_cuenta"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/txt_nueva_cuenta"
+        android:layout_weight="10">
+    </Button>
+
+
+</LinearLayout>
