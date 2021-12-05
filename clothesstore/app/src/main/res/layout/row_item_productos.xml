@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="50">
+
+        <ImageView
+            android:id="@+id/imv_producto"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/mujer1">
+
+        </ImageView>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="50"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tev_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre"
+            android:textSize="20dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/tev_item_precio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Precio"
+            android:textSize="20dp">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/btn_item_favorito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Descripción">
+
+        </Button>
+
+        <Button
+            android:id="@+id/btn_item_carrito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Carrito">
+
+        </Button>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

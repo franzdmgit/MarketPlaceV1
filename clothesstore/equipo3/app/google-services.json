@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1034345456188",
+    "project_id": "grupo10-equipo3",
+    "storage_bucket": "grupo10-equipo3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1034345456188:android:bd66b635c48066c3751939",
+        "android_client_info": {
+          "package_name": "com.unicaldasmafe.example.grupo10"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1034345456188-smhpqvc6qa1k35v4e7ho6oolakpgfgqb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChPRZ4DiCAprtW6Oy1gvwLaUsfBd0cMlU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1034345456188-smhpqvc6qa1k35v4e7ho6oolakpgfgqb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
