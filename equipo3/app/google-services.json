@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "862921224699",
+    "project_id": "clothes-store-9e6d8",
+    "storage_bucket": "clothes-store-9e6d8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:862921224699:android:fb9c1fac51af30adbf9b5e",
+        "android_client_info": {
+          "package_name": "com.unicaldasmafe.example.grupo10"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "862921224699-rdk0533lut8e9ji53j4k3p06q8j95l1j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1aL72oeUT4M0utnZDAKCHjqY5z3Wn7Is"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "862921224699-rdk0533lut8e9ji53j4k3p06q8j95l1j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

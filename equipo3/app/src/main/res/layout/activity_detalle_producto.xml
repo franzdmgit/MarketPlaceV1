@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetalleProductoActivity"
+    android:background="@drawable/bg_color">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:id="@+id/tev_detalle_nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Nombre"
+                android:textSize="30dp"
+                android:textColor="@color/white"
+                android:layout_margin="20dp"/>
+
+            <ImageView
+                android:id="@+id/imv_detalle_imagen"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:src="@drawable/img01"
+                android:layout_margin="20dp" />
+
+            <TextView
+                android:id="@+id/tev_detalle_categoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Categoria"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/tev_detalle_precio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Precio"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/tev_detalle_stock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Disponible"
+                android:textSize="20dp"
+                android:textColor="@color/white"/>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="81dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="#FFEB3B"
+                    android:padding="6dp"
+                    android:text="Amarillo" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="9dp"
+                    android:background="#D2270909"
+                    android:padding="6dp"
+                    android:text="Cafe"
+                    android:textColor="@color/white" />
+
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="9dp"
+                    android:background="#00BCD4"
+                    android:padding="6dp"
+                    android:text="Azul" />
+
+                <RadioButton
+                    android:id="@+id/radioButton4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="9dp"
+                    android:background="#F44336"
+                    android:padding="6dp"
+                    android:text="Rojo" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripcion"
+                android:textSize="25dp"
+                android:background="#989090"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:layout_gravity="center">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tev_detalle_especifico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="especificaciones"
+                android:textSize="23dp"
+                android:textColor="@color/black"
+                android:paddingLeft="20dp"
+                android:layout_margin="20dp"
+                android:layout_marginTop="30dp">
+
+            </TextView>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+</LinearLayout>

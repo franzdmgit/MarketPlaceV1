@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductoFragment"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
+
+
+       <EditText
+           android:id="@+id/edt_producto_nombre"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="nombre">
+
+       </EditText>
+
+       <EditText
+           android:id="@+id/edt_producto_categoria"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="categoria">
+       </EditText>
+
+       <EditText
+           android:id="@+id/edt_producto_precio"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="precio"
+           android:inputType="number">
+       </EditText>
+
+          <EditText
+              android:id="@+id/edt_producto_detalle"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="detalle">
+          </EditText>
+
+       <CheckBox
+           android:id="@+id/chb_producto_enstock"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Esta Disponible">
+
+       </CheckBox>
+
+       <Button
+           android:id="@+id/btn_producto_seleccionar"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Seleccionar Imagen">
+
+       </Button>
+          
+          
+      <Button
+          android:id="@+id/btn_producto_subir"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Subir imagen">
+
+      </Button>
+
+       <ImageView
+           android:id="@+id/imv_producto_imagen"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:src="@drawable/imdex">
+
+       </ImageView>
+
+       <Button
+           android:id="@+id/btn_producto_guardar"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Guardar Producto">
+
+       </Button>
+
+      </LinearLayout>
+
+
+
+  </ScrollView>
+
+
+</LinearLayout>

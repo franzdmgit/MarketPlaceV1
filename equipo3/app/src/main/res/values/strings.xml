@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">CLOTHES STORE</string>
+    <string name="txt_jugar">PLAY</string>
+    <string name="txt_perfil">PROFILE</string>
+    <string name="txt_ajustes">CONFIG</string>
+    <string name="txt_acercade">ABOUT</string>
+    <string name="txt_usuario">USER</string>
+    <string name="txt_contrasena">PASSWORD</string>
+    <string name="txt_login">SIGN IN</string>
+    <string name="txt_registro">SIGN UP</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Product</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="txt_terminos">Terms and Conditions
+The Terms and Conditions, also known as General Terms of Use, are a document designed for those who are going to create or manage a page or website, in which the conditions under which users will enter and use the website are met. .
+
+The document is designed for sites that are operated or managed by people or companies that have their domicile in the Mexican Republic or that are intended for people who live in this country, however, its content refers to common civil provisions in most of the countries of the world.
+
+This document is used for the regular conditions and rules to which both the users of a website and its owner and / or administrator adhere, regarding the access and use of the website. Similarly, it refers to privacy policies, protection of personal data, links, etc., which will be taken to protect the privacy of users.
+
+Said rules and principles provide a higher level of trust and legal certainty to the users of the website as well as to its owners and / or administrators, since the type of people to whom it is addressed and the responsibilities that they acquire from the make use of the site or the services offered therein.
+
+    </string>
+
+    <string-array name="categorias">
+        <item>Ropa Mujer</item>
+        <item>Ropa Hombre</item>
+        <item>Accesorios</item>
+        <item>Zapatos Hombre</item>
+        <item>zapatos Mujer</item>
+        <item>Perfumes</item>
+    </string-array>
+
+    <string name="producto">Add Product</string>
+    <string name="salir">Exit</string>
+
+
+</resources>
