@@ -26,6 +26,7 @@ public interface UserDao {
     @Query("SELECT * from " + Constant.NAME_TABLE_USER)
     List<User> getUser();
 
-    /*mostrar los datos que desea
-    @Query("SELECT id, username from user WHERE ")*/
+
+    @Query("SELECT * FROM " + Constant.NAME_TABLE_USER + " WHERE email = :email and password = :password")
+    User getUserLogin(String email, String password);
 }

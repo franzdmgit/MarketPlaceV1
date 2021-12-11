@@ -1,6 +1,9 @@
 package com.unicaldasmafe.example.grupo10.ui.gallery;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -8,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,6 +25,8 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.unicaldasmafe.example.grupo10.DetalleProductoActivity;
 import com.unicaldasmafe.example.grupo10.R;
 import com.unicaldasmafe.example.grupo10.databinding.FragmentGalleryBinding;
 
@@ -38,7 +44,7 @@ public class GalleryFragment extends Fragment {
     private RecyclerView.Adapter mAdapter;
 
 
-    private String productos=  "[{\"nombre\":\"Saco mujer\",\"categoria\":\"Ropa Mujer\",\"precio\":60000,\"enstock\":true,\"sucursal\":[{\"nombre\":\"Sucursal A\",\"direccion\":\"Diección A\",\"encargado\":{\"nombre\":\"Encargado A\"}},{\"nombre\":\"Sucursal B\",\"direccion\":\"Diección B\",\"encargado\":{\"nombre\":\"Encargado B\"}}]},{\"nombre\":\"Guayos\",\"categoria\":\"Futbol\",\"precio\":40000,\"enstock\":true,\"sucursal\":[{\"nombre\":\"Sucursal C\",\"direccion\":\"Diección C\",\"encargado\":{\"nombre\":\"Encargado C\"}},{\"nombre\":\"Sucursal D\",\"direccion\":\"Diección D\",\"encargado\":{\"nombre\":\"Encargado D\"}}]},{\"nombre\":\"Balón\",\"categoria\":\"Futbol\",\"precio\":40000,\"enstock\":true,\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]},{\"nombre\":\"Casco\",\"categoria\":\"Futbol\",\"precio\":40000,\"enstock\":true,\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]},{\"nombre\":\"Medias\",\"categoria\":\"Futbol\",\"precio\":40000,\"enstock\":true,\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]},{\"nombre\":\"Canilleras\",\"categoria\":\"Futbol\",\"precio\":40000,\"enstock\":true,\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]},{\"nombre\":\"Pelota\",\"categoria\":\"Futbol\",\"precio\":40000,\"enstock\":true,\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]},{\"nombre\":\"Tobilleras\",\"categoria\":\"Futbol\",\"precio\":40000,\"enstock\":true,\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]},{\"nombre\":\"Guantes\",\"categoria\":\"Futbol\",\"precio\":40000,\"enstock\":true,\"sucursal\":[{\"nombre\":\"Sucursal A\",\"direccion\":\"Diección A\",\"encargado\":{\"nombre\":\"Encargado A\"}},{\"nombre\":\"Sucursal B\",\"direccion\":\"Diección B\",\"encargado\":{\"nombre\":\"Encargado B\"}}]},{\"nombre\":\"Guayos\",\"categoria\":\"Futbol\",\"precio\":40000,\"enstock\":true,\"sucursal\":[{\"nombre\":\"Sucursal C\",\"direccion\":\"Diección C\",\"encargado\":{\"nombre\":\"Encargado C\"}},{\"nombre\":\"Sucursal D\",\"direccion\":\"Diección D\",\"encargado\":{\"nombre\":\"Encargado D\"}}]},{\"nombre\":\"Balón\",\"categoria\":\"Futbol\",\"precio\":40000,\"enstock\":true,\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]},{\"nombre\":\"Casco\",\"categoria\":\"Futbol\",\"precio\":40000,\"enstock\":true,\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]},{\"nombre\":\"Medias\",\"categoria\":\"Futbol\",\"precio\":40000,\"enstock\":true,\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]},{\"nombre\":\"Canilleras\",\"categoria\":\"Futbol\",\"precio\":40000,\"enstock\":true,\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]},{\"nombre\":\"Pelota\",\"categoria\":\"Futbol\",\"precio\":40000,\"enstock\":true,\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]},{\"nombre\":\"Tobilleras\",\"categoria\":\"Futbol\",\"precio\":40000,\"enstock\":true,\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]}]";
+    private String productos=  "[{\"nombre\":\"Blusa floral de espalda con abertura de ojo de puño con nudo\",\"categoria\":\"Ropa Mujer\",\"precio\":50807,\"enstock\":true,\"url\":\"https://img.ltwebstatic.com/images3_pi/2021/06/07/1623062053172aa76622f89931ddd70787853c5ce2_thumbnail_600x.webp\",\"detalles\":\"Color:        Rosa vieja \\n Estilo:        Bohemio \\n Tipo de Estampado:        floral de margarita \\nDetalles:        Nudo\",\"sucursal\":[{\"nombre\":\"Sucursal A\",\"direccion\":\"Diección A\",\"encargado\":{\"nombre\":\"Encargado A\"}},{\"nombre\":\"Sucursal B\",\"direccion\":\"Diección B\",\"encargado\":{\"nombre\":\"Encargado B\"}}]},{\"nombre\":\"Abrigo de cuello con solapa con diseño de solapa\",\"categoria\":\"Ropa Mujer\",\"precio\":109430,\"enstock\":true,\"url\":\"https://img.ltwebstatic.com/images3_pi/2021/08/23/16296754474d41df47b4c1612bdc5404c8598cb039_thumbnail_600x.webp\",\"detalles\":\"Color:        Marrón \\n Estilo:        Elegante \\n Tipo de Estampado:Liso \\n Detalles:        Botón, Bolsillos Falsos\",\"sucursal\":[{\"nombre\":\"Sucursal C\",\"direccion\":\"Diección C\",\"encargado\":{\"nombre\":\"Encargado C\"}},{\"nombre\":\"Sucursal D\",\"direccion\":\"Diección D\",\"encargado\":{\"nombre\":\"Encargado D\"}}]},{\"nombre\":\"Camisa flok belmira para mujer manga larga\",\"categoria\":\"Ropa Mujer\",\"precio\":189900,\"enstock\":true,\"url\":\"https://cuerosvelezco.vteximg.com.br/arquivos/ids/222513-1563-2344/1032041-31-02-Camisa-manga-larga.jpg?v=637692173974200000\",\"detalles\":\"Color: Arena \\n Material:tejido plano \\n - Mangas tipo globo \\n - Escote recto \\n- Ruedo con elástico\",\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]},{\"nombre\":\"Pantalones unicolor de pierna amplia\",\"categoria\":\"Ropa Mujer\",\"precio\":62532,\"enstock\":false,\"url\":\"https://img.ltwebstatic.com/images3_pi/2020/12/30/1609296900ff5f038017ec77fb7f69f9df65d6dce6_thumbnail_600x.webp\",\"detalles\":\"\",\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]},{\"nombre\":\"Camisa hombre margalarga\",\"categoria\":\"Ropa Hombre\",\"precio\":69900,\"enstock\":false,\"url\":\"https://falabella.scene7.com/is/image/FalabellaCO/881900634_1?wid=1500&hei=1500&qlt=70\",\"detalles\":\"Material  :      Algodón \\n Composición  :      55% Algodón 45% Poliéster \\n Diseño:     Liso\\n Estilo:       Casual\\n Fit :   Slim\",\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]},{\"nombre\":\"Abrigo De Cuadros Sin Camiseta\",\"categoria\":\"Ropa Hombre\",\"precio\":119430,\"enstock\":true,\"url\":\"https://img.ltwebstatic.com/images3_pi/2021/09/10/1631255055f00ca749f5dcc1f5cef12c19a983de5c_thumbnail_750x.webp\",\"detalles\":\"Color: Multicolor\\n Material: Tejido De Mezcla \\n Composición: 90% Poliéster, 10% Lana \\n Tipo estampado: Guingán \\n Estilo: Casual\",\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]},{\"nombre\":\"Pantalones Cargo Con Bolsillo Con Solapa\",\"categoria\":\"Ropa Hombre\",\"precio\":119430,\"enstock\":true,\"url\":\"https://img.ltwebstatic.com/images3_pi/2021/10/27/1635300473a23eb1e0eceda92ac16b0dbe7590722c_thumbnail_750x.webp\",\"detalles\":\"Color: Verde militar\\n Material: Poliéster\\n Composición: 20% Algodón, 80% Poliéster\\n Tipo estampado: Liso\\n Estilo: Casual\",\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]},{\"nombre\":\"pantalon deportivo hombre\",\"categoria\":\"Ropa Hombre\",\"precio\":60000,\"enstock\":true,\"url\":\"https://falabella.scene7.com/is/image/FalabellaCO/9139324_1?wid=800&hei=800&qlt=70\",\"detalles\":\"Marca: Reebok \\n Modelo:GH6218TELPANE0 \\nTipo        Pantalones deportivos \\n Género        Hombre\\n Material        Algodón \\n Composición        100% Algodón \\n Tecnología del material        No Aplica \\n Fit        Regular\",\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]},{\"nombre\":\"Maletin deportiva\",\"categoria\":\"Accesorios\",\"precio\":99000,\"enstock\":true,\"url\":\"https://falabella.scene7.com/is/image/FalabellaPE/16745713_1?wid=800&hei=800&qlt=70\",\"detalles\":\"Marca: Puma \\n Modelo:LIQ075209 02 \\nTipo        Maletas deportivas \\n Género:Unisex \\n Material        Poliéster \\n Alto:33 cm \\n Ancho:61 cm\",\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]},{\"nombre\":\"Relojes de hombre Blanco Casual\",\"categoria\":\"Accesorios\",\"precio\":15633,\"enstock\":true,\"url\":\"https://img.ltwebstatic.com/images3_pi/2021/05/14/16209793800bef7731e5fddc4ab0341a21bb7e6b32_thumbnail_600x.webp\",\"detalles\":\"Género:Hombre\\nEstilo:Casual\\nTipo de visualización:Puntero\\nForma de reloj:Redondo\\nMovimiento:Cuarzo\\nMaterial de la Caja:  Aleación \\nMaterial de la correa:Cuerina\",\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]},{\"nombre\":\"Mochila con solapa con estampado geométrico\",\"categoria\":\"Accesorios\",\"precio\":19541,\"enstock\":true,\"url\":\"https://img.ltwebstatic.com/images3_pi/2021/08/16/162907959091628aa85c08066058a1234eafe6cf15_thumbnail_600x.webp\",\"detalles\":\"Color:Blanco\\nCantidad:pieza\\nComposición:100% Poliuretano\\nMaterial:Cuerina\",\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]},{\"nombre\":\"Prendedor encanto silueta jaguar metálico dorado\",\"categoria\":\"Accesorios\",\"precio\":49900,\"enstock\":true,\"url\":\"https://cuerosvelezco.vteximg.com.br/arquivos/ids/224479-1563-2344/1032393-04-01-Prendedor.jpg?v=637714657132930000\",\"detalles\":\"MATERIAL:Zamak\\n- Zamac y resina\\n- Silueta jaguar\",\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]},{\"nombre\":\"Zapatos cordón ground de cuero para hombre inspiración deportiva\",\"categoria\":\"Zapatos\",\"precio\":309900,\"enstock\":true,\"url\":\"https://cuerosvelezco.vteximg.com.br/arquivos/ids/223501-1563-2344/1031856-02-04-Tenis-de-cuero.jpg?v=637699147519770000\",\"detalles\":\"Color: Arena\\n Material:Cuero\\n- Cuero liso con brillo natural\\n- Capellada monocolor\\n- Efecto de envejecido manual\",\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]},{\"nombre\":\"Tenis suela tractor capellada en combina\",\"categoria\":\"Zapatos\",\"precio\":179900,\"enstock\":true,\"url\":\"https://elaco.vteximg.com.br/arquivos/ids/526158-1000-1464/-elaco-producto-Tenis-MAUVE-e351507-1.jpg?v=637655175845630000\",\"detalles\":\"Color: Rosado\\n Material:gamuza\\n Tipo: Suela Tractor\\n Cantidad :1 par\",\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]},{\"nombre\":\"Botas Minimalista Con Cordón Delantero De Felpa Interior\",\"categoria\":\"Zapatos\",\"precio\":183126,\"enstock\":true,\"url\":\"https://img.ltwebstatic.com/images3_pi/2021/10/19/163462562374a027b278194c5366e6bbfd8846e746_thumbnail_750x.webp\",\"detalles\":\"Color: Gris\\n Material De Suela Exterior: Cuacho\\n Material Exterior: Cuerina\\n Tipo estampado: Liso\\n Cantidad: 1 Par\",\"sucursal\":[{\"nombre\":\"Sucursal E\",\"direccion\":\"Diección E\",\"encargado\":{\"nombre\":\"Encargado E\"}},{\"nombre\":\"Sucursal F\",\"direccion\":\"Diección F\",\"encargado\":{\"nombre\":\"Encargado F\"}}]}]";
 
 
 
@@ -82,6 +88,7 @@ public class GalleryFragment extends Fragment {
         /*rev_productos.setLayoutManager(new GridLayoutManager(getActivity(), 2));*/
 
         try {
+
             JSONArray jsonproductos = new JSONArray(productos);
 
             mAdapter = new ProductosAdapter(jsonproductos, getActivity());
@@ -141,11 +148,33 @@ class ProductosAdapter extends RecyclerView.Adapter<ProductosAdapter.ViewHolder>
             String nombre = this.productos.getJSONObject(position).getString("nombre");
             String categoria = this.productos.getJSONObject(position).getString("categoria");
             int precio = this.productos.getJSONObject(position).getInt("precio");
+            String imagen =this.productos.getJSONObject(position).getString("url");
 
             holder.tev_item_name.setText(nombre);
             holder.tev_item_categoria.setText(categoria);
             holder.tev_item_precio.setText("$" + precio);
-        } catch (JSONException e) {
+
+            Glide.with(miActividad).load(imagen).placeholder(new ColorDrawable(Color.BLACK)).into(holder.imv_producto);
+            holder.imv_producto.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    try {
+                        //Log.e("PRODUCTOS", productos.getJSONObject(position).toString());
+                        Intent intent = new Intent(miActividad, DetalleProductoActivity.class);
+
+                        intent.putExtra("producto", productos.getJSONObject(position).toString());
+
+                        miActividad.startActivity(intent);
+
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+        }
+
+        catch (JSONException e) {
             holder.tev_item_name.setText("error");
         }
 
@@ -161,11 +190,13 @@ class ProductosAdapter extends RecyclerView.Adapter<ProductosAdapter.ViewHolder>
         private TextView tev_item_name;
         private TextView tev_item_categoria;
         private TextView tev_item_precio;
+        private ImageView imv_producto;
         public ViewHolder(View v) {
             super(v);
             tev_item_name = v.findViewById(R.id.tev_item_name);
             tev_item_categoria = v.findViewById(R.id.tev_item_categoria);
             tev_item_precio = v.findViewById(R.id.tev_item_precio);
+            imv_producto = v.findViewById(R.id.imv_producto);
 
         }
     }

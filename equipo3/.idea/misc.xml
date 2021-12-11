@@ -3,13 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Descargas/equipo3/equipo3/app/src/main/res/layout/activity_login.xml" value="0.12817028985507245" />
-        <entry key="..\:/Users/dlore/AndroidStudioProjects/equipo3/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Escritorio/equipo3/equipo3/app/src/main/res/layout/activity_detalle_producto.xml" value="0.20416666666666666" />
+        <entry key="..\:/Escritorio/equipo3/equipo3/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Escritorio/equipo3/equipo3/app/src/main/res/layout/activity_mapa.xml" value="0.1" />
+        <entry key="..\:/Escritorio/equipo3/equipo3/app/src/main/res/layout/activity_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Escritorio/equipo3/equipo3/app/src/main/res/layout/activity_registro.xml" value="0.20416666666666666" />
+        <entry key="..\:/Escritorio/equipo3/equipo3/app/src/main/res/layout/activity_terminos.xml" value="0.20416666666666666" />
+        <entry key="..\:/Escritorio/equipo3/equipo3/app/src/main/res/layout/app_bar_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Escritorio/equipo3/equipo3/app/src/main/res/layout/fragment_gallery.xml" value="0.18854166666666666" />
+        <entry key="..\:/Escritorio/equipo3/equipo3/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Escritorio/equipo3/equipo3/app/src/main/res/layout/fragment_producto.xml" value="0.18854166666666666" />
+        <entry key="..\:/Escritorio/equipo3/equipo3/app/src/main/res/layout/nav_header_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Escritorio/equipo3/equipo3/app/src/main/res/layout/row_item_productos.xml" value="0.20416666666666666" />
+        <entry key="..\:/Escritorio/equipo3/equipo3/app/src/main/res/menu/activity_main_drawer.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/equipo3/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2203125" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/equipo3/app/src/main/res/drawable/bordes_redondos.xml" value="0.2203125" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/equipo3/app/src/main/res/drawable/campo_redondeado.xml" value="0.2203125" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/equipo3/app/src/main/res/drawable/ic_menu_camera.xml" value="0.2169230769230769" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/equipo3/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.2169230769230769" />
+        <entry key="..\:/Users/usuario/AndroidStudioProjects/equipo3/app/src/main/res/drawable/ic_menu_producto.xml" value="0.2101851851851852" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/equipo3/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/equipo3/app/src/main/res/layout/activity_registro.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/equipo3/app/src/main/res/layout/activity_terminos.xml" value="0.20416666666666666" />
@@ -20,7 +32,7 @@
         <entry key="..\:/Users/usuario/AndroidStudioProjects/equipo3/app/src/main/res/layout/fragment_slideshow.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/equipo3/app/src/main/res/layout/nav_header_menu.xml" value="0.25" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/equipo3/app/src/main/res/layout/row_item_productos.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/usuario/AndroidStudioProjects/equipo3/app/src/main/res/menu/activity_main_drawer.xml" value="0.1" />
+        <entry key="..\:/Users/usuario/AndroidStudioProjects/equipo3/app/src/main/res/menu/activity_main_drawer.xml" value="0.22" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/grupo10/app/src/main/res/drawable/campo_redondeado.xml" value="0.8392857142857143" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/grupo10/app/src/main/res/layout-land/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/usuario/AndroidStudioProjects/grupo10/app/src/main/res/layout/activity_login.xml" value="0.25" />

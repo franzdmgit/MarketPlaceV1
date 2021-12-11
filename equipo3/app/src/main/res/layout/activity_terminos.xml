@@ -6,24 +6,46 @@
     android:layout_height="match_parent"
     tools:context=".TerminosActivity"
     android:orientation="vertical"
-    android:layout_margin="20dp">
-
+    android:layout_margin="20dp"
+    >
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_terminos">
-
-    </TextView>
-
-    <Button
-        android:id="@+id/btn_regresar"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="20dp"
-        android:padding="15dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Aceptar">
+        android:text="Terminos y condiciones de uso"
+        android:background="@color/purple_200"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        ></TextView
+        >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    </Button>
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_terminos"
+                >
+
+            </TextView>
+            <Button
+                android:id="@+id/btn_regresar"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:padding="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Aceptar">
+
+            </Button>
+
+        </LinearLayout>
+    </ScrollView>
+
 
 </LinearLayout>

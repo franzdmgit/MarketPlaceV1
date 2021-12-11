@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetalleProductoActivity"
+    android:orientation="vertical"
+    android:background="@color/purple_200">
+
+    <TextView
+        android:id="@+id/tev_detalle_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textSize="30dp"
+        android:layout_gravity="center">
+
+    </TextView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imv_detalle_imagen"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/logopeque">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tev_detalle_categoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Categoria"
+                android:textSize="20dp"
+                android:layout_gravity="center">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tev_detalle_precio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Precio"
+                android:layout_gravity="center">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tev_detalle_stock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Disponible"
+                android:layout_gravity="center">
+
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Especificaciones"
+                android:paddingHorizontal="10dp"
+                android:layout_margin="10dp"
+                android:textSize="15dp"
+                android:textColor="@color/design_default_color_primary_variant"
+                android:background="@color/white"
+                android:layout_gravity="left"></TextView>
+
+            <TextView
+                android:id="@+id/tev_detalle_especificaciones"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Detalles"
+                android:padding="10dp"
+                android:layout_gravity="center"></TextView>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

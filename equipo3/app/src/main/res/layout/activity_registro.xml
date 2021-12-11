@@ -10,6 +10,7 @@
     tools:context=".RegistroActivity">
 
     <EditText
+        android:id="@+id/edt_nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nombre">
@@ -17,6 +18,7 @@
     </EditText>
 
     <EditText
+        android:id="@+id/edt_apellido"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Apellido">
@@ -36,7 +38,7 @@
         android:id="@+id/edt_contrasena"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="contrasena"
+        android:hint="Contraseña"
         android:inputType="textPassword">
 
     </EditText>
